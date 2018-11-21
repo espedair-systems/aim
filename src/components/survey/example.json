@@ -1,0 +1,117 @@
+{
+    "title": "General Social Survey",
+    pages: [{
+        name: "page1",
+        elements: [{
+                type: "text",
+                name: "DOB_Q01",
+                title: "What is your Date of Birth",
+                inputType: "date"
+            },
+            {
+                type: "radiogroup",
+                name: "VIS_Q01",
+                indent: 1,
+                title: "Are you an Australian citizen ?",
+                choices: [{
+                        value: "1",
+                        text: "Yes"
+                    },
+                    {
+                        value: "5",
+                        text: "No"
+                    }
+                ],
+                colCount: 2
+            },
+            {
+                type: "radiogroup",
+                name: "VIS_Q02",
+                visibleIf: "{VIS_Q01} = 5",
+                title: "Are you a New Zealand citizen ?",
+                choices: [{
+                        value: "1",
+                        text: "Yes"
+                    },
+                    {
+                        value: "5",
+                        text: "No"
+                    }
+                ],
+                colCount: 2
+            },
+            {
+                type: "text",
+                name: "VIS_SG03",
+                visibleIf: "{VIS_Q01} = 5",
+                title: "When did you arrive in Australia ?",
+                inputType: "date"
+            },
+            {
+                type: "radiogroup",
+                name: "Do you intend to stay in Australia for twelve months or more?",
+                visibleIf: "{VIS_Q01} = 5",
+                choices: [{
+                        value: "1",
+                        text: "Yes"
+                    },
+                    {
+                        value: "5",
+                        text: "No"
+                    },
+                    {
+                        value: "6",
+                        text: "Don't know"
+                    }
+                ],
+                colCount: 3
+            },
+            {
+                type: "radiogroup",
+                name: "VIS_Q23",
+                visibleIf: "{VIS_Q01} = 5",
+                title: "Were you the main applicant for that visa application?",
+                choices: [{
+                        value: "1",
+                        text: "Yes"
+                    },
+                    {
+                        value: "5",
+                        text: "No"
+                    },
+                    {
+                        value: "6",
+                        text: "Don't Know"
+                    }
+                ],
+                colCount: 3
+            },
+            {
+                type: "radiogroup",
+                name: "VIS_Q24",
+                visibleIf: "{VIS_Q01} = 5",
+                title: "Do you know the name and 3 digit subclass number of that visa?",
+                choices: [{
+                        value: "1",
+                        text: "Visa name and subclass provided"
+                    },
+                    {
+                        value: "2",
+                        text: "Visa subclass (only) provided"
+                    },
+                    {
+                        value: "3",
+                        text: "Visa name (only) provided"
+                    },
+                    {
+                        value: "4",
+                        text: "Visa details unkown"
+                    }
+                ]
+            }
+        ]
+    }],
+    showPageNumbers: true,
+    showQuestionNumbers: "off",
+    showProgressBar: "bottom"
+}
